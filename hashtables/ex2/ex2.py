@@ -16,11 +16,14 @@ def reconstruct_trip(tickets, length):
     #while loop until reaches the end
     while len(route) < length:
         #first find NONE/'find'
-        if tickets[0].source == find:
-            #add that destination to route
-            route.append(tickets[0].destination)
-            #reassign find to destination
-            find = tickets[0].destination
+        #need a for loop?
+        for ticket in tickets:
+            for index in ticket:
+                if tickets[index].source == find:
+                    #add that destination to route
+                    route.append(tickets[index].destination)
+                    #reassign find to destination
+                    find = tickets[index].destination
     #return route
 
     return route
