@@ -10,30 +10,31 @@ def reconstruct_trip(tickets, length):
     YOUR CODE HERE
     """
     # Your code here
-    #variables needed: route = list for route order, find = to change which source I'm looking for
-    #need to be able to keep track of index..for loops don't work, maybe variable will?
+    #variables needed: route = list for route order, 
+    #find = to change which source I'm looking for
+    #index --> keep track of index in list of tickets, not index of result
+    #while loop until reaches the end (len = route length)
+        #first find NONE/'find'
+            #add that destination to route
+            #reassign find to destination
+        #need to change index before looping again
+        #if length -1 (to keep in loop) = index
+            #reassign index to 0
+        #otherwise increment index
+    #return route
+
     route = []
     find = "NONE"
     index = 0
-    #while loop until reaches the end
     while len(route) < length:
-        #first find NONE/'find'
         if tickets[index].source == find:
-            #add that destination to route
             route.append(tickets[index].destination)
-            #reassign find to destination
             find = tickets[index].destination
 
-        #need to change index before looping again
-        #if length of route = index, index is 0, looping through again
         if index == length -1:
-            #keep index at 0
             index = 0
-        #otherwise increment index
         else:
             index += 1
-
-    #return route
     return route
 
 
