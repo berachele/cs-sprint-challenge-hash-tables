@@ -10,5 +10,9 @@ def reconstruct_trip(tickets, length):
     YOUR CODE HERE
     """
     # Your code here
+    #variables needed: route = list for route order, find = to change which source I'm looking for
+    route = []
+    find = "NONE"
+    
 
     return route
