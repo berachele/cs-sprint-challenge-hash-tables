@@ -24,3 +24,12 @@ def reconstruct_trip(tickets, length):
     #return route
 
     return route
+
+
+ticket_1 = Ticket("NONE", "PDX")
+ticket_2 = Ticket("PDX", "DCA")
+ticket_3 = Ticket("DCA", "NONE")
+
+tickets = [ticket_1, ticket_2, ticket_3]
+
+reconstruct_trip(tickets, 3)
