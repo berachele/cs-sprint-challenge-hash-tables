@@ -25,7 +25,13 @@ def reconstruct_trip(tickets, length):
             find = tickets[index].destination
 
         #need to change index before looping again
-        index += 1
+        #if length of route = 0 (NONE still not in)
+        if index == len(route) -1:
+            #keep index at 0
+            index += 1
+        #otherwise increment index
+        else:
+            index = 0
 
     #return route
     return route
