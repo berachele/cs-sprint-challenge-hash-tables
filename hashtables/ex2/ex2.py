@@ -31,7 +31,7 @@ def reconstruct_trip(tickets, length):
             index += 1
         #otherwise increment index
         else:
-            index = 0
+            index += 1
 
     #return route
     return route
