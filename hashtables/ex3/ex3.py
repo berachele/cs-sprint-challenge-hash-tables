@@ -15,7 +15,8 @@ def intersection(arrays):
                 #add 1 to cache
                 cache[num] += 1
             #otherwise, cache[num] = 1 (only in there once)
-            cache[num] = 1
+            else:
+                cache[num] = 1
     #have a cache with key, values
     #wanting to find the key with the most values
     for key, value in cache.items():
@@ -30,8 +31,8 @@ def intersection(arrays):
 if __name__ == "__main__":
     arrays = []
 
-    arrays.append(list(range(1000000, 2000000)) + [1, 2, 3])
-    arrays.append(list(range(2000000, 3000000)) + [1, 2, 3])
-    arrays.append(list(range(3000000, 4000000)) + [1, 2, 3])
+    arrays.append(list(range(10, 20)) + [1, 2, 3])
+    arrays.append(list(range(20, 30)) + [1, 2, 3])
+    arrays.append(list(range(30, 40)) + [1, 2, 3])
 
     print(intersection(arrays))
