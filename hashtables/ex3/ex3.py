@@ -18,7 +18,7 @@ def intersection(arrays):
             cache[num] = 1
     #have a cache with key, values
     #wanting to find the key with the most values
-    for key, value in cache:
+    for key, value in cache.items():
         #if value is the len of arrays,
         if value == len(arrays):
             #add the key to result list
