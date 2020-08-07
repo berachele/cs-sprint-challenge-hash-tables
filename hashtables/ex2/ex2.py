@@ -25,10 +25,10 @@ def reconstruct_trip(tickets, length):
             find = tickets[index].destination
 
         #need to change index before looping again
-        #if length of route = 0 (NONE still not in)
-        if index == len(route) -1:
+        #if length of route = index, index is 0, looping through again
+        if index == length -1:
             #keep index at 0
-            index += 1
+            index = 0
         #otherwise increment index
         else:
             index += 1
@@ -37,19 +37,22 @@ def reconstruct_trip(tickets, length):
     return route
 
 
-ticket_1 = Ticket("PIT", "ORD")
-ticket_2 = Ticket("XNA", "SAP")
-ticket_3 = Ticket("SFO", "BHM")
-ticket_4 = Ticket("FLG", "XNA")
-ticket_5 = Ticket("NONE", "LAX")
-ticket_6 = Ticket("LAX", "SFO")
-ticket_7 = Ticket("SAP", "SLC")
-ticket_8 = Ticket("ORD", "NONE")
-ticket_9 = Ticket("SLC", "PIT")
-ticket_10 = Ticket("BHM", "FLG")
 
-tickets = [ticket_1, ticket_2, ticket_3, ticket_4, ticket_5,
-            ticket_6, ticket_7, ticket_8, ticket_9, ticket_10]
+
+#TESTER
+# ticket_1 = Ticket("PIT", "ORD")
+# ticket_2 = Ticket("XNA", "SAP")
+# ticket_3 = Ticket("SFO", "BHM")
+# ticket_4 = Ticket("FLG", "XNA")
+# ticket_5 = Ticket("NONE", "LAX")
+# ticket_6 = Ticket("LAX", "SFO")
+# ticket_7 = Ticket("SAP", "SLC")
+# ticket_8 = Ticket("ORD", "NONE")
+# ticket_9 = Ticket("SLC", "PIT")
+# ticket_10 = Ticket("BHM", "FLG")
+
+# tickets = [ticket_1, ticket_2, ticket_3, ticket_4, ticket_5,
+#             ticket_6, ticket_7, ticket_8, ticket_9, ticket_10]
 
 
 reconstruct_trip(tickets, 10)
