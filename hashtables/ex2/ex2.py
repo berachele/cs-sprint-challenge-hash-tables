@@ -23,8 +23,11 @@ def reconstruct_trip(tickets, length):
             route.append(tickets[index].destination)
             #reassign find to destination
             find = tickets[index].destination
-    #return route
 
+        #need to change index before looping again
+        index += 1
+
+    #return route
     return route
 
 
