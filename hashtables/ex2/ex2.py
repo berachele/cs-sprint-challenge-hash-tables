@@ -11,19 +11,18 @@ def reconstruct_trip(tickets, length):
     """
     # Your code here
     #variables needed: route = list for route order, find = to change which source I'm looking for
+    #need to be able to keep track of index..for loops don't work, maybe variable will?
     route = []
     find = "NONE"
+    index = 0
     #while loop until reaches the end
     while len(route) < length:
         #first find NONE/'find'
-        #need a for loop?
-        for ticket in tickets:
-            for index in ticket:
-                if tickets[index].source == find:
-                    #add that destination to route
-                    route.append(tickets[index].destination)
-                    #reassign find to destination
-                    find = tickets[index].destination
+        if tickets[index].source == find:
+            #add that destination to route
+            route.append(tickets[index].destination)
+            #reassign find to destination
+            find = tickets[index].destination
     #return route
 
     return route
