@@ -7,14 +7,22 @@ def intersection(arrays):
     result = []
     cache = {}
     #check each array in arrays
+    for a in arrays:
         #check each number in array
+        for num in a:
             #if the number is in cache
+            if num in cache:
                 #add 1 to cache
-            #otherwise, cache[num] = 0
+                cache[num] += 1
+            #otherwise, cache[num] = 1 (only in there once)
+            cache[num] = 1
     #have a cache with key, values
     #wanting to find the key with the most values
+    for key, value in cache:
         #if value is the len of arrays,
+        if value == len(arrays):
             #add the key to result list
+            result.append(key)
     #return result
     return result
 
