@@ -4,24 +4,24 @@ def has_negatives(a):
     """
     # Your code here
     #variables needed: result = list to return, neg = list for negative numbers
+    #check list of arrays
+        #if number is less than 0, its a neg
+            #add to neg list
+    #check number in neg list
+        #check number in array list
+            #if array number == the absolute number of the negative number
+                #add to result
+    #return result
+
     result = []
     neg = []
-    #check list of arrays
     for item in a:
-        #if number is less than 0, its a neg
         if item < 0:
-            #add to neg list
             neg.append(item)
-    #check number in neg list
     for num1 in neg:
-        #check number in array list
         for num2 in a:
-            #if array number == the absolute number of the negative number
             if num2 == abs(num1):
-                #add to result
                 result.append(num2)
-
-    #return result
     return result
 
 
