@@ -13,6 +13,14 @@ def reconstruct_trip(tickets, length):
     #variables needed: route = list for route order, find = to change which source I'm looking for
     route = []
     find = "NONE"
-    
+    #while loop until reaches the end
+    while len(route) < length:
+        #first find NONE/'find'
+        if tickets.source == find:
+            #add that destination to route
+            route.append(tickets.destination)
+            #reassign find to destination
+            find = tickets.destination
+    #return route
 
     return route
